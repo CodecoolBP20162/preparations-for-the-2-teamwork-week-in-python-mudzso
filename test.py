@@ -4,7 +4,7 @@ import unittest
 
 
 def IsOdd(n):
-    return
+    return n % 2 == 1
 
 # Here's our "unit tests".
 
@@ -15,11 +15,10 @@ class IsOddTests(unittest.TestCase):
         self.failUnless(IsOdd(1))
 
     def testTwo(self):
-        self.failIf(IsOdd(2))
+        self.assertEqual(IsOdd(2), False)
 
 
 def main():
-    unittest.main()
+    unittest.main(module='test_file')
 
-if __name__ == '__main__':
-    main()
+if __name__ == 'test_file'
